@@ -1,31 +1,52 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+const keys = require('../../config.js');
+
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
       someState: 'value of state',
       currentZip: 10000,
+      currentPlaceId: 0,
       currentCoords: {
         latitude: 0,
         longitude: 0,
       },
+      currentAddress: '',
       restaurants: [],
       currentUser: 'default',
     };
-    this.getCurrentZip = this.getCurrentZip.bind(this);
+    this.getCurrentZipByCoords = this.getCurrentZipByCoords.bind(this);
+    this.getCurrentZipByAddress = this.getCurrentZipByAddress.bind(this);
     this.changeUser = this.changeUser.bind(this);
   }
   changeUser(user) {
     this.setState({ currentUser: user });
   }
 
+  getCurrentZipByAddress() {
+    const addressStr = this.state.currentAddress;
+    const address = addressStr.split(' ').join('+');
+    let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${keys.geoAPI}`;
+    fetch(url)
+      .then((response) => response.json())
+      .catch((err) => console.log(err))
+      .then((data) => {
+        console.log(data.results[0].address_components[7].long_name);
+        this.setState({
+          currentZip: data.results[0].address_components[7].long_name,
+          currentPlaceId: data.results[0].place_id,
+          currentUser: 'customer',
+        });
+      });
+  }
+
   // get current zip code by using geolocation to get location coordinates then perform a reverse geocoding
-  getCurrentZip() {
+  getCurrentZipByCoords() {
     var lat, long;
     navigator.geolocation.getCurrentPosition((position) => {
-      const keys = require('../../config.js');
       let lat = position.coords.latitude;
       let lng = position.coords.longitude;
       let url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${keys.geoAPI}`;
@@ -39,6 +60,7 @@ class App extends React.Component {
           console.log(data.results[0].address_components[7].long_name);
           this.setState({
             currentZip: data.results[0].address_components[7].long_name,
+            currentPlaceId: data.results[0].place_id,
             currentUser: 'customer',
           });
         });
@@ -65,27 +87,31 @@ class App extends React.Component {
     } else {
       return (
         <div>
-          <input />
-          <button
+          <input
+            id="address"
+            type="textbox"
+            onChange={(e) => this.setState({ currentAddress: e.target.value })}
+          />
+          <input
+            id="submit"
+            type="button"
+            value="Search"
             onClick={() => {
               this.changeUser('loading');
-              // use axios call as promise, after result has returned change the state, then show the results
-              setTimeout(() => {
-                this.changeUser('customer');
-              }, 1000); // placeholder function that will show restaurants after get the results
+              this.getCurrentZipByAddress();
             }}
-          >
-            Search
-          </button>
-          <button
-            onClick={() => {
-              this.changeUser('loading');
-              this.getCurrentZip();
-              // use axios call as promise, after result has returned change the state, then show the results
-            }}
-          >
-            Use my current location
-          </button>
+          />
+          <div>
+            <button
+              onClick={() => {
+                this.changeUser('loading');
+                this.getCurrentZipByCoords();
+                // use axios call as promise, after result has returned change the state, then show the results
+              }}
+            >
+              Use my current location
+            </button>
+          </div>
         </div>
       );
     }

@@ -5,6 +5,7 @@ mongoose.Promise = global.Promise;
 const restaurantSchema = new mongoose.Schema({
   name: String,
   address: String,
+  place_id: String,
   phone: Number,
   ratings: Array,
   price: Array,
