@@ -71,9 +71,8 @@ class App extends React.Component {
   }
 
   getRestaurants(zipcode) {
-    console.log(zipcode);
     return axios
-      .get(`/restaurants/:zipcode=${zipcode}`)
+      .get(`/restaurants/${zipcode}`)
       .then((results) => {
         this.setState({ restaurants: results.data });
       })

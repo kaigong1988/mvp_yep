@@ -1,15 +1,46 @@
 import React from 'react';
-const keys = require('../../../config.js');
-
-// const url = `https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=40.7605904,-73.8239152&destinations=40.6905615,-73.9976592&key=${keys.geoAPI}`;
-
-// const url = `https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=place_id:ChIJ3S-JXmauEmsRUcIaWtf4MzE2&destinations=place_id:ChIJL7oRNhdgwokRa6efzcKHRe0&key=${keys.geoAPI}`;
-// place_id: ChIJ3S - JXmauEmsRUcIaWtf4MzE;
-
-// const url = `https://maps.googleapis.com/maps/api/geocode/json?address=14308+roosevelt+ave+flushing+ny+11354&key=${keys.geoAPI}`;
+import axios from 'axios';
 
 const RestaurantsList = (props) => {
-  return <div>restaurantsList</div>;
+  const getDistance = (org, des) => {
+    return axios
+      .get(`/distance/?org=${org}&des=${des}`)
+      .then((result) => {
+        return result;
+      })
+      .catch((err) => {
+        console.log('We run into an error, please try again.');
+      });
+  };
+  if (props.restaurants.length === 0) {
+    return <span>please wait for related product to load</span>;
+  } else {
+    return (
+      <div>
+        <ul>
+          {props.restaurants.map((item, index) => {
+            getDistance(props.currentPlaceId, item.place_id).then((result) => {
+              return (
+                <div>
+                  <h3>{item.name}</h3>
+                  <p>
+                    {item.description}
+                    <br />
+                    {item.address}
+                    <br />
+                    {item.phone}
+
+                    <br />
+                    {result}
+                  </p>
+                </div>
+              );
+            });
+          })}
+        </ul>
+      </div>
+    );
+  }
 };
 
 export default RestaurantsList;

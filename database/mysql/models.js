@@ -25,7 +25,7 @@ module.exports = {
 from restaurants where zipcode BETWEEN ${LowRange} AND ${upRange};`;
     dbConnection.query(querStry, function (err, results) {
       if (err) {
-        console.log(err);
+        console.log(err, zipcode);
       } else {
         callback(err, results);
       }
