@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Restaurants_list from './customer/restaurants_list.jsx';
+import axios from 'axios';
 
 const keys = require('../../config.js');
 
@@ -21,6 +23,7 @@ class App extends React.Component {
     this.getCurrentZipByCoords = this.getCurrentZipByCoords.bind(this);
     this.getCurrentZipByAddress = this.getCurrentZipByAddress.bind(this);
     this.changeUser = this.changeUser.bind(this);
+    this.getRestaurants = this.getRestaurants.bind(this);
   }
   changeUser(user) {
     this.setState({ currentUser: user });
@@ -34,12 +37,12 @@ class App extends React.Component {
       .then((response) => response.json())
       .catch((err) => console.log(err))
       .then((data) => {
-        console.log(data.results[0].address_components[7].long_name);
         this.setState({
           currentZip: data.results[0].address_components[7].long_name,
           currentPlaceId: data.results[0].place_id,
           currentUser: 'customer',
         });
+        this.getRestaurants(data.results[0].address_components[7].long_name);
       });
   }
 
@@ -57,24 +60,35 @@ class App extends React.Component {
         .then((response) => response.json())
         .catch((err) => console.log(err))
         .then((data) => {
-          console.log(data.results[0].address_components[7].long_name);
           this.setState({
             currentZip: data.results[0].address_components[7].long_name,
             currentPlaceId: data.results[0].place_id,
             currentUser: 'customer',
           });
+          this.getRestaurants(data.results[0].address_components[7].long_name);
         });
     });
+  }
+
+  getRestaurants(zipcode) {
+    console.log(zipcode);
+    return axios
+      .get(`/restaurants/:zipcode=${zipcode}`)
+      .then((results) => {
+        this.setState({ restaurants: results.data });
+      })
+      .catch((err) => {
+        console.log('We run into an error, please try again.');
+      });
   }
 
   render() {
     if (this.state.currentUser === 'customer') {
       return (
-        <div>
-          I am an eater!
-          {this.state.currentCoords.latitude}
-          {this.state.currentCoords.longitude}
-        </div>
+        <Restaurants_list
+          currentPlaceId={this.state.currentPlaceId}
+          restaurants={this.state.restaurants}
+        />
       );
     } else if (this.state.currentUser === 'owner') {
       return <div>I am an owner!</div>;
