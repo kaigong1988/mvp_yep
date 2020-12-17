@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Restaurants_list from './customer/restaurants_list.jsx';
 import axios from 'axios';
+import TextField from '@material-ui/core/TextField';
 
 const keys = require('../../config.js');
 
@@ -24,6 +25,7 @@ class App extends React.Component {
     this.getCurrentZipByAddress = this.getCurrentZipByAddress.bind(this);
     this.changeUser = this.changeUser.bind(this);
     this.getRestaurants = this.getRestaurants.bind(this);
+    this.changeCurrentAddress = this.changeCurrentAddress.bind(this);
   }
   changeUser(user) {
     this.setState({ currentUser: user });
@@ -80,6 +82,9 @@ class App extends React.Component {
         console.log('We run into an error, please try again.');
       });
   }
+  changeCurrentAddress(str) {
+    this.setState({ currentAddress: str });
+  }
 
   render() {
     if (this.state.currentUser === 'customer') {
@@ -87,19 +92,37 @@ class App extends React.Component {
         <Restaurants_list
           currentPlaceId={this.state.currentPlaceId}
           restaurants={this.state.restaurants}
+          changeUser={this.changeUser}
+          getCurrentZipByAddress={this.getCurrentZipByAddress}
+          getCurrentZipByCoords={this.getCurrentZipByCoords}
+          changeCurrentAddress={this.changeCurrentAddress}
         />
       );
     } else if (this.state.currentUser === 'owner') {
       return <div>I am an owner!</div>;
     } else if (this.state.currentUser === 'loading') {
       return (
-        <div>
-          <img src="./spinner.gif" />
+        <div className="container">
+          <div class="lds-default">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
       );
     } else {
       return (
-        <div>
+        <div className="container">
+          <h1>Search good restaurants near you</h1>
           <input
             id="address"
             type="textbox"

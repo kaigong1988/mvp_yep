@@ -206,4 +206,104 @@ mvp_yep`.`restaurants
 `
 (`id`, `name`, `place_id`, `address`, `zipcode`, `phone`, `description`) VALUES
 ('7', 'Xian Famous Foods', 'ChIJaSgLyZNZwokRPbB6lmMtr14', '313 6th Ave, New York, NY 10014', '10014', '(212) 786-2068', 'Chinese noodles burgers');
+
+INSERT INTO `
+mvp_yep`.`restaurants
+`
+(`name`, `place_id`, `address`, `zipcode`, `phone`, `description`) VALUES
+('Luke\'s Lobster FiDi', 'ChIJ8S_dHhRawokRxWXB91--clM', '26 S William St, New York, NY 10004', '10004', '
+(212) 747-1700', 'Seafood');
+INSERT INTO `mvp_yep`.`restaurants` (`name`, `place_id`, `address`, `zipcode`, `phone`, `description`) VALUES ('Katz\'s Delicatessen', 'ChIJQVR56oNZwokRoFzE6087cqw', '205 E Houston St, New York, NY 10002', '10002', '(212) 254-2246', 'Delis Sandwiches Soup');
+INSERT INTO `
+mvp_yep`.`restaurants
+`
+(`name`, `place_id`, `address`, `zipcode`, `phone`, `description`) VALUES
+('Juliana\'s Pizza', 'ChIJgVa9tzBawokR1X5fNaioZeg', '19 Old Fulton St, Brooklyn, NY 11201', '11201', '
+(718) 596-6700', 'Pizza');
+*/
+
+/*
+INSERT INTO `
+mvp_yep`.`reviews
+`
+(`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
+('7', 'like the noodle', 'will come back again', '5', '2');
+INSERT INTO `
+mvp_yep`.`reviews
+`
+(`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
+('7', 'good food', 'good food for this price', '4', '2');
+INSERT INTO `
+mvp_yep`.`reviews
+`
+(`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
+('8', 'loving their seafood', 'will come back again', '5', '4');
+INSERT INTO `
+mvp_yep`.`reviews
+`
+(`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
+('8', 'lobster is fresh', 'not cheap tho', '4', '4');
+INSERT INTO `
+mvp_yep`.`reviews
+`
+(`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
+('9', 'clean', 'location is good', '3', '2');
+INSERT INTO `
+mvp_yep`.`reviews
+`
+(`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
+('9', 'famous sandwich', 'love the sandwich', '5', '2');
+INSERT INTO `
+mvp_yep`.`reviews
+`
+(`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
+('10', 'good pizza', 'good pizza', '5', '2');
+*/
+
+/*
+INSERT INTO `
+mvp_yep`.`photos
+`
+(`restaurant_id`, `url`) VALUES
+('8', 'https://s3-media0.fl.yelpcdn.com/bphoto/neCjFvJ-u5LmDlBz71ullg/o.jpg');
+INSERT INTO `
+mvp_yep`.`photos
+`
+(`restaurant_id`, `url`) VALUES
+('8', 'https://s3-media0.fl.yelpcdn.com/bphoto/pGaY-Ds2ya178RtktXlBLg/o.jpg');
+INSERT INTO `
+mvp_yep`.`photos
+`
+(`restaurant_id`, `url`) VALUES
+('8', 'https://s3-media0.fl.yelpcdn.com/bphoto/lzyfDsqDgVQHxsVMs3dW7Q/o.jpg');
+INSERT INTO `
+mvp_yep`.`photos
+`
+(`restaurant_id`, `url`) VALUES
+('9', 'https://s3-media0.fl.yelpcdn.com/bphoto/1_l-A0wjRpbcxcSFSI1OEA/o.jpg');
+INSERT INTO `
+mvp_yep`.`photos
+`
+(`restaurant_id`, `url`) VALUES
+('9', 'https://s3-media0.fl.yelpcdn.com/bphoto/0AIj3jgrPx1K71WEEn8J2g/o.jpg');
+INSERT INTO `
+mvp_yep`.`photos
+`
+(`restaurant_id`, `url`) VALUES
+('9', 'https://s3-media0.fl.yelpcdn.com/bphoto/YBBcvlKb4kqsitb9h1-p2g/o.jpg');
+INSERT INTO `
+mvp_yep`.`photos
+`
+(`restaurant_id`, `url`) VALUES
+('10', 'https://s3-media0.fl.yelpcdn.com/bphoto/Ielsk99frSq8ZgZtWmMV7Q/o.jpg');
+INSERT INTO `
+mvp_yep`.`photos
+`
+(`restaurant_id`, `url`) VALUES
+('10', 'https://s3-media0.fl.yelpcdn.com/bphoto/mid0nFgtziUxtxh3YUPm5Q/o.jpg');
+INSERT INTO `
+mvp_yep`.`photos
+`
+(`restaurant_id`, `url`) VALUES
+('10', 'https://s3-media0.fl.yelpcdn.com/bphoto/vz8puM_m4gmpEj3tT_9uZw/o.jpg');
 */
