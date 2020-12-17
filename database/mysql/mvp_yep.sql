@@ -46,19 +46,13 @@ CREATE TABLE `mvp_yep`.`photos`
 (`id`));
 
 /* insert data
-INSERT INTO `
-mvp_yep`.`photos
-`
+INSERT INTO `mvp_yep`.`photos`
 (`restaurant_id`, `url`) VALUES
 ('1', 'https://images2.minutemediacdn.com/image/upload/c_crop,h_1126,w_2000,x_0,y_181/f_auto,q_auto,w_1100/v1554932288/shape/mentalfloss/12531-istock-637790866.jpg');
-INSERT INTO `
-mvp_yep`.`photos
-`
+INSERT INTO `mvp_yep`.`photos`
 (`restaurant_id`, `url`) VALUES
 ('1', 'https://images.pexels.com/photos/6267/menu-restaurant-vintage-table.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500');
-INSERT INTO `
-mvp_yep`.`photos
-`
+INSERT INTO `mvp_yep`.`photos`
 (`restaurant_id`, `url`) VALUES
 ('1', 'https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
 
@@ -82,228 +76,143 @@ INSERT INTO `mvp_yep`.`photos` (`restaurant_id`, `url`) VALUES ('7', 'https://lh
 INSERT INTO `mvp_yep`.`photos` (`restaurant_id`, `url`) VALUES ('7', 'https://images.squarespace-cdn.com/content/v1/5a6682c251a584c5094aaf06/1586993165169-S28HHIHDZKXWOB9R0DG1/ke17ZwdGBToddI8pDm48kMR1yAHb8bPoH1-OdajP2rZZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpya-Yv2-AUIrtyc_1d9d84jKAfrgH35AgL5HDK7jKFTEAbkVb2mHFRzAaMt_-j0ggg/%5BB1%5D%2BStewed%2BPork%2BBurger.jpg');  */
 
 
-/* INSERT INTO `
-mvp_yep`.`reviews
-`
+/* INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('1', 'I like it', 'this is good food', '5', '3');
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('1', 'good good', 'very cheap', '4', '2');
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
+
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('1', 'very good I like it', 'cool', '4', '2');
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('2', 'good', 'good food', '5', '2');
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('2', 'i like the food', 'Will come back', '4', '2');
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('2', 'location is good', 'near my house', '3', '2');
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('3', 'too spicy', 'food is too spicy', '2', '2');
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('3', 'good food', 'I like it', '4', '2');
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('4', 'good food', 'good food but a little expensive', '4', '4');
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('4', 'i like the noodle', 'good noodle', '4', '4');
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('5', 'good price', 'good price', '3', '1');
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('5', 'i dont like it', 'good was cold', '2', '1');
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('6', 'good', 'good', '4', '2');
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('7', 'I like the noodle', 'very good noodle', '5', '2');
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('7', 'good food ', 'good food for this price', '4', '1');
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('7', 'dumpling', 'dumpling is good', '4', '2');
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('7', 'cant get enough of this place', 'i will come everyday', '5', '1');
 */
 
 
 /*
-INSERT INTO `
-mvp_yep`.`restaurants
-`
+INSERT INTO `mvp_yep`.`restaurants`
 (`id`, `name`, `place_id`, `address`, `zipcode`, `phone`, `description`) VALUES
 ('1', 'Tavern 157', 'ChIJFYps6yVgwokRcJ5C_LxMORg', '157-12 Northern Blvd  Flushing, NY 11354', '11354', '(347) 220-8454', 'Win Bars Asian Fusion Tapas/small Plates');
-INSERT INTO `
-mvp_yep`.`restaurants
-`
+INSERT INTO `mvp_yep`.`restaurants`
 (`id`, `name`, `place_id`, `address`, `zipcode`, `phone`, `description`) VALUES
 ('2', 'Kimganae', 'ChIJxcol9xBgwokRImDRmxmF7Ag', '3912 Union St, Flushing, NY 11354', '11354', '(718) 888-3100', 'Korean Breakfast Brunch Coffee&Tea');
-INSERT INTO `
-mvp_yep`.`restaurants
-`
+INSERT INTO `mvp_yep`.`restaurants`
 (`id`, `name`, `place_id`, `address`, `zipcode`, `phone`, `description`) VALUES
 ('3', 'Mad For Chicken', 'ChIJk6OtlCVgwokRpjM_CH03mgs', '157-18 Northern Blvd, Flushing, NY 11354', '11354', '(718) 321-3818', 'Gasropubs chicken wings korean');
-INSERT INTO `
-mvp_yep`.`restaurants
-`
+INSERT INTO `mvp_yep`.`restaurants`
 (`id`, `name`, `place_id`, `address`, `zipcode`, `phone`, `description`) VALUES
 ('4', 'T-Swirl Crepe', 'ChIJ2fj1VnWKwokRki8GzaKd2w8', '39-24 Bell Blvd, Bayside, NY 11361', '11361', '(929) 373-3061', 'Desserts Creperies Coffee Tea');
-INSERT INTO `
-mvp_yep`.`restaurants
-`
+INSERT INTO `mvp_yep`.`restaurants`
 (`id`, `name`, `place_id`, `address`, `zipcode`, `phone`, `description`) VALUES
 ('5', 'Olio e Plu', 'ChIJS1_PopZZwokREiuDSAWuJB0', '3 Greenwich Ave, New York, NY 10014', '10014', '(212) 243-6546', 'Pizza Italian Breakfast Brunch');
-INSERT INTO `
-mvp_yep`.`restaurants
-`
+INSERT INTO `mvp_yep`.`restaurants`
 (`id`, `name`, `place_id`, `address`, `zipcode`, `phone`, `description`) VALUES
 ('6', 'Boucherie West Village', 'ChIJL1V8eJRZwokRsAcYCLrqKL4', '99 7th Ave S, New York, NY 10014', '10014', '(212) 837-1616', 'French Cocktail Bars Stakehouse');
-INSERT INTO `
-mvp_yep`.`restaurants
-`
+INSERT INTO `mvp_yep`.`restaurants`
 (`id`, `name`, `place_id`, `address`, `zipcode`, `phone`, `description`) VALUES
 ('7', 'Xian Famous Foods', 'ChIJaSgLyZNZwokRPbB6lmMtr14', '313 6th Ave, New York, NY 10014', '10014', '(212) 786-2068', 'Chinese noodles burgers');
 
-INSERT INTO `
-mvp_yep`.`restaurants
-`
+INSERT INTO `mvp_yep`.`restaurants`
 (`name`, `place_id`, `address`, `zipcode`, `phone`, `description`) VALUES
-('Luke\'s Lobster FiDi', 'ChIJ8S_dHhRawokRxWXB91--clM', '26 S William St, New York, NY 10004', '10004', '
-(212) 747-1700', 'Seafood');
+('Luke\'s Lobster FiDi', 'ChIJ8S_dHhRawokRxWXB91--clM', '26 S William St, New York, NY 10004', '10004', '(212) 747-1700', 'Seafood');
 INSERT INTO `mvp_yep`.`restaurants` (`name`, `place_id`, `address`, `zipcode`, `phone`, `description`) VALUES ('Katz\'s Delicatessen', 'ChIJQVR56oNZwokRoFzE6087cqw', '205 E Houston St, New York, NY 10002', '10002', '(212) 254-2246', 'Delis Sandwiches Soup');
-INSERT INTO `
-mvp_yep`.`restaurants
-`
+INSERT INTO `mvp_yep`.`restaurants`
 (`name`, `place_id`, `address`, `zipcode`, `phone`, `description`) VALUES
-('Juliana\'s Pizza', 'ChIJgVa9tzBawokR1X5fNaioZeg', '19 Old Fulton St, Brooklyn, NY 11201', '11201', '
-(718) 596-6700', 'Pizza');
+('Juliana\'s Pizza', 'ChIJgVa9tzBawokR1X5fNaioZeg', '19 Old Fulton St, Brooklyn, NY 11201', '11201', '(718) 596-6700', 'Pizza');
 */
 
 /*
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('7', 'like the noodle', 'will come back again', '5', '2');
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('7', 'good food', 'good food for this price', '4', '2');
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('8', 'loving their seafood', 'will come back again', '5', '4');
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('8', 'lobster is fresh', 'not cheap tho', '4', '4');
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('9', 'clean', 'location is good', '3', '2');
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('9', 'famous sandwich', 'love the sandwich', '5', '2');
-INSERT INTO `
-mvp_yep`.`reviews
-`
+INSERT INTO `mvp_yep`.`reviews`
 (`restaurant_id`, `title`, `body`, `rating`, `price`) VALUES
 ('10', 'good pizza', 'good pizza', '5', '2');
 */
 
 /*
-INSERT INTO `
-mvp_yep`.`photos
-`
+INSERT INTO `mvp_yep`.`photos`
 (`restaurant_id`, `url`) VALUES
 ('8', 'https://s3-media0.fl.yelpcdn.com/bphoto/neCjFvJ-u5LmDlBz71ullg/o.jpg');
-INSERT INTO `
-mvp_yep`.`photos
-`
+INSERT INTO `mvp_yep`.`photos`
 (`restaurant_id`, `url`) VALUES
 ('8', 'https://s3-media0.fl.yelpcdn.com/bphoto/pGaY-Ds2ya178RtktXlBLg/o.jpg');
-INSERT INTO `
-mvp_yep`.`photos
-`
+INSERT INTO `mvp_yep`.`photos`
 (`restaurant_id`, `url`) VALUES
 ('8', 'https://s3-media0.fl.yelpcdn.com/bphoto/lzyfDsqDgVQHxsVMs3dW7Q/o.jpg');
-INSERT INTO `
-mvp_yep`.`photos
-`
+INSERT INTO `mvp_yep`.`photos`
 (`restaurant_id`, `url`) VALUES
 ('9', 'https://s3-media0.fl.yelpcdn.com/bphoto/1_l-A0wjRpbcxcSFSI1OEA/o.jpg');
-INSERT INTO `
-mvp_yep`.`photos
-`
+INSERT INTO `mvp_yep`.`photos`
 (`restaurant_id`, `url`) VALUES
 ('9', 'https://s3-media0.fl.yelpcdn.com/bphoto/0AIj3jgrPx1K71WEEn8J2g/o.jpg');
-INSERT INTO `
-mvp_yep`.`photos
-`
+INSERT INTO `mvp_yep`.`photos`
 (`restaurant_id`, `url`) VALUES
 ('9', 'https://s3-media0.fl.yelpcdn.com/bphoto/YBBcvlKb4kqsitb9h1-p2g/o.jpg');
-INSERT INTO `
-mvp_yep`.`photos
-`
+INSERT INTO `mvp_yep`.`photos`
 (`restaurant_id`, `url`) VALUES
 ('10', 'https://s3-media0.fl.yelpcdn.com/bphoto/Ielsk99frSq8ZgZtWmMV7Q/o.jpg');
-INSERT INTO `
-mvp_yep`.`photos
-`
+INSERT INTO `mvp_yep`.`photos`
 (`restaurant_id`, `url`) VALUES
 ('10', 'https://s3-media0.fl.yelpcdn.com/bphoto/mid0nFgtziUxtxh3YUPm5Q/o.jpg');
-INSERT INTO `
-mvp_yep`.`photos
-`
+INSERT INTO `mvp_yep`.`photos`
 (`restaurant_id`, `url`) VALUES
 ('10', 'https://s3-media0.fl.yelpcdn.com/bphoto/vz8puM_m4gmpEj3tT_9uZw/o.jpg');
 */
