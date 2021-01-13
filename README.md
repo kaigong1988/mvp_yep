@@ -1,6 +1,6 @@
 # A Yelp clone that allow users to view good restaurant around their neighbors
 
-This project is built over a course of 2 days sprint.
+This project was built over a course of 2 days sprint.
 
 ## Current features
 
