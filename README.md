@@ -1,3 +1,8 @@
-# Starting Point
+# A Yelp clone that allow users to view good restaurant around their neighbors
 
-This is a basic starting point for a project that includes Node.js, React, and CSS. Additional functionality, such as database, TypeScript, Sass, etc. can be easily added on.
+* Current features
+
+- users can view restaurants list around them based on their Geolocation or the address that they put in.
+
+- users may see the distance between those restaurants and their current location or the address that they put in.
+
