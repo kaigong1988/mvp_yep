@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Restaurants_list from './customer/restaurants_list.jsx';
+import UploadBiz from './owner/UploadBiz.jsx';
 import axios from 'axios';
 import TextField from '@material-ui/core/TextField';
 
@@ -19,7 +20,7 @@ class App extends React.Component {
       },
       currentAddress: '',
       restaurants: [],
-      currentUser: 'default',
+      currentUser: 'owner',
     };
     this.getCurrentZipByCoords = this.getCurrentZipByCoords.bind(this);
     this.getCurrentZipByAddress = this.getCurrentZipByAddress.bind(this);
@@ -50,7 +51,7 @@ class App extends React.Component {
 
   // get current zip code by using geolocation to get location coordinates then perform a reverse geocoding
   getCurrentZipByCoords() {
-    var lat, long;
+    let lat, long;
     navigator.geolocation.getCurrentPosition((position) => {
       let lat = position.coords.latitude;
       let lng = position.coords.longitude;
@@ -99,7 +100,7 @@ class App extends React.Component {
         />
       );
     } else if (this.state.currentUser === 'owner') {
-      return <div>I am an owner!</div>;
+      return <UploadBiz />;
     } else if (this.state.currentUser === 'loading') {
       return (
         <div className="container">
