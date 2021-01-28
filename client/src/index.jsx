@@ -50,10 +50,11 @@ class App extends React.Component {
 
   // get current zip code by using geolocation to get location coordinates then perform a reverse geocoding
   getCurrentZipByCoords() {
-    var lat, long;
+    let lat, long;
     navigator.geolocation.getCurrentPosition((position) => {
       let lat = position.coords.latitude;
       let lng = position.coords.longitude;
+      console.log(lat, lng);
       let url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${keys.geoAPI}`;
       this.setState({
         currentCoords: { latitude: lat, longitude: lng },
@@ -103,7 +104,7 @@ class App extends React.Component {
     } else if (this.state.currentUser === 'loading') {
       return (
         <div className="container">
-          <div class="lds-default">
+          <div className="lds-default">
             <div></div>
             <div></div>
             <div></div>
