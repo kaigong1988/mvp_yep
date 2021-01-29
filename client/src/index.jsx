@@ -12,7 +12,7 @@ class App extends React.Component {
     super();
     this.state = {
       someState: 'value of state',
-      currentZip: 10000,
+      currentZip: 10001,
       currentPlaceId: 0,
       currentCoords: {
         latitude: 0,
